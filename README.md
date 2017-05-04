@@ -8,7 +8,7 @@ A toy Angular.js project needs transitioning to webpack
 ### 开发环境
 运行 `npm start` 就能启动开发环境
 1. 修改 js, css 文件可以自动重载，其中 css 文件可以做到不刷新页面重载样式
-1. js 代码可以使用最新的 ES2017 特性
+1. js 代码可以使用最新的 [ES2017 特性](https://babeljs.io/docs/plugins/preset-es2017/)
 1. css 代码可以不用书写[vendor prefix](https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix)
 1. 开发环境中抛错可以定位到构建前的源代码
 
