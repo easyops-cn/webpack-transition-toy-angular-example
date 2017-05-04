@@ -1,6 +1,8 @@
 {
   "devDependencies": {
-    "pushstate-server": "^3.0.0"
+    "pushstate-server": "^3.0.0",
+    "webpack": "^2.5.0",
+    "webpack-dev-server": "^2.4.5"
   },
   "scripts": {
     "start": "pushstate-server ./app 3000"
