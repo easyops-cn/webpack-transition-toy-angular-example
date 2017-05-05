@@ -1,6 +1,11 @@
 # webpack-transition-toy-angular-example
 A toy Angular.js project needs transitioning to webpack
 
+## Slides 下载地址
+[Markdown](https://github.com/easyops-cn/webpack-transition-toy-angular-example/blob/slides/docs/slides-webpack-development.md)
+|
+[PDF](https://github.com/easyops-cn/webpack-transition-toy-angular-example/raw/slides/docs/slides-webpack-development.pdf)
+
 ## 目标
 
 在不修改任何业务代码的情况下，将整个项目改成使用 webpack 加载，要求满足以下环境需求：
