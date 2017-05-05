@@ -23,6 +23,13 @@ module.exports = {
             }]
         }]
     },
+    resolve: {
+        modules: [
+            path.resolve(process.cwd(), './node_modules'),
+            path.resolve(process.cwd(), './app/bower_components')
+        ],
+        descriptionFiles: ['package.json', 'bower.json']
+    },
     devServer: {
         contentBase: contentBase,
         port: 1339
