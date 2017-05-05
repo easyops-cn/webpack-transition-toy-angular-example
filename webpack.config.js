@@ -13,6 +13,7 @@ module.exports = {
     module: {
         rules: [{
             test: /\.js$/,
+            exclude: /bower_components|node_modules/,
             use: [{
                 loader: 'babel-loader',
                 options: {
@@ -20,6 +21,15 @@ module.exports = {
                         ['env', { targets: { browsers: ['last 2 Chrome versions'] }, modules: false }]
                     ]
                 }
+            }, {
+                loader: 'imports-loader',
+                options: 'angular' // use '$=jquery' for jquery imports
+            }]
+        }, {
+            test: path.resolve(process.cwd(), './app/bower_components/angular-route/index.js'),
+            use: [{
+                loader: 'imports-loader',
+                options: 'angular'
             }]
         }]
     },
