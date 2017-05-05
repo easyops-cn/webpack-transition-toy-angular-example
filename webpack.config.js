@@ -31,6 +31,9 @@ module.exports = {
                 loader: 'imports-loader',
                 options: 'angular'
             }]
+        }, {
+            test: /\.css$/,
+            use: ['style-loader', 'css-loader']
         }]
     },
     resolve: {
