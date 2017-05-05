@@ -5,6 +5,7 @@ const contentBase = path.resolve(process.cwd(), './app');
 
 module.exports = {
     context: contentBase,
+    devtool: 'source-map',
     entry: './entry.js',
     output: {
         path: path.resolve(process.cwd(), './app/bundle'),
