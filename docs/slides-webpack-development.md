@@ -288,7 +288,8 @@ git show
 
 ---
 
-# Too big to debug
+# Dev UX
+## Too big to debug
 
 - 找不到设断点的地方
 - 浏览器的调试器加载要半天
@@ -296,7 +297,8 @@ git show
 
 ---
 
-# Sourcemap
+# Dev UX (cont.)
+## Sourcemap
 
 源代码 <===> 生成代码
 
@@ -312,6 +314,24 @@ git show
 
 ---
 
+# Dev UX (cont.)
+## CSS 热重载
+```js
+{
+  devServer: {
+    hot: true
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ]
+}
+```
+```bash
+git checkout 95a6ba0e
+git show
+```
+
+---
 # Upshot & Take-away
 - webpack
   * 从 entry 到 output 的构建工具
@@ -321,7 +341,7 @@ git show
 - 使用`imports-loader`给业务文件注入依赖
 - 使用`style-loader`和`css-loader`加载 css 文件
 - 使用`devtool: 'source-map'`来生成 source-map
-
+- 使用`webpack.HotModuleReplacementPlugin()` 配合 `devServer.hot`启动 CSS 热重载
 ---
 
 # 生产环境怎么办？
@@ -344,6 +364,15 @@ git show
 # Advanced Topics
 - [Code Splitting](https://webpack.js.org/guides/code-splitting/): 使用`import()`切分模块以实现按需加载
 - [Tree Shaking](https://webpack.js.org/guides/tree-shaking/): webpack 2 基于 ES2015 `import/export` 静态模块系统的代码消除功能
-- [Hot Module Replacement](https://webpack.js.org/guides/hmr-react/): react 技术栈下的热重载方案
+- [Hot Module Replacement on React](https://webpack.js.org/guides/hmr-react/): react 技术栈下的 js/css 热重载方案
 - [hard-source-webpack-plugin](https://github.com/mzgoddard/hard-source-webpack-plugin): 提供中间步骤 cache 以加速 webpack 构建
 - [dll-plugin](https://robertknight.github.io/posts/webpack-dll-plugins/): 对框架库做封装以改善开发环境修改后的 rebuild time
+
+---
+
+# References
+
+- [Official Documentation](https://webpack.js.org/)
+- [Awesome Webpack](https://github.com/webpack-contrib/awesome-webpack): webpack 资源、库及周边大全
+- [medium/webpack](https://medium.com/webpack): webpack 官方博客
+- [Getting started with webpack 2](https://blog.madewithenvy.com/getting-started-with-webpack-2-ed2b86c68783)
