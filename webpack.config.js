@@ -1,5 +1,6 @@
 const path = require('path')
 const process = require('process')
+const webpack = require('webpack')
 
 const contentBase = path.resolve(process.cwd(), './app');
 
@@ -44,8 +45,12 @@ module.exports = {
         ],
         descriptionFiles: ['package.json', 'bower.json']
     },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin()
+    ],
     devServer: {
         contentBase: contentBase,
+        hot: true,
         port: 1339
     }
 }
