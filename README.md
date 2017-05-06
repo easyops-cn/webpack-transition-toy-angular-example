@@ -12,6 +12,7 @@ A toy Angular.js project needs transitioning to webpack
 
 ```bash
 git clone https://github.com/easyops-cn/webpack-transition-toy-angular-example.git
+cd webpack-transition-toy-angular-example
 git checkout webpack
 npm i
 
