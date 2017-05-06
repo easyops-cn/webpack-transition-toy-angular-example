@@ -6,6 +6,19 @@ A toy Angular.js project needs transitioning to webpack
 |
 [PDF](https://github.com/easyops-cn/webpack-transition-toy-angular-example/raw/slides/docs/slides-webpack-development.pdf)
 
+## 动手环节事先准备
+
+这样省去现场 `npm install` 的时间
+
+```bash
+git clone https://github.com/easyops-cn/webpack-transition-toy-angular-example.git
+git checkout webpack
+npm i
+
+# or you have yarn installed
+yarn
+```
+
 ## 目标
 
 在不修改任何业务代码的情况下，将整个项目改成使用 webpack 加载，要求满足以下环境需求：
